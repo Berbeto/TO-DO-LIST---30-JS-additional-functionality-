@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --bg-color: #31112c;
+    --second-color: #7d0633;
+    --filled-color: #f2a07b;
+    --add-color: #fbdcc4;
+}
+
+body{
+    background-color:var(--bg-color);
+    font-family: 'Roboto', sans-serif;
+}
+
+h1{
+    color: var(--add-color);
+    text-transform: uppercase;
+}
+
+.wrapper{
+    width: 80vw;
+    height: 80vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container{
+    margin: 10px 20px;
+    padding: 10px 20px;
+    width: 30%;
+    min-width: 300px;
+    background-color: var(--second-color);
+    border-radius: 5px;
+}
+
+/* INPUT FORM */
+
+form{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.added-item{
+    display: flex;
+    justify-content:space-between;
+}
+
+.btn{
+    width: 80%;
+    max-width: 200px;
+    background-color: var(--bg-color);
+    color: var(--add-color);
+    transition: .3s;
+    border: 0;
+    padding: 12px;
+}
+
+.delete-item{
+    background-color: var(--second-color);
+    color: var(--add-color);
+    padding: 3px;
+    border: none;
+    border: none;
+}
+
+form input{
+    border: none;
+    padding: 12px;
+    border-radius: 3px;
+}
+
+
+.form-input{
+    /* flex: 1; */
+    width: 70%;
+    max-width: 300px;
+    margin-right: 5px;
+}
+
+.form-input::placeholder{
+    color: #767c77;
+    text-transform: uppercase;
+    
+
+}
+
+
+.form-submit{
+    width: 30%;
+    max-width: 100px;
+    background-color: var(--bg-color);
+    color: var(--add-color);
+    transition: .3s;
+}
+
+.form-submit:hover{
+    background-color: var(--filled-color); 
+}
+
+/* ITEM LIST */
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 20px 0;
+    border: 0;
+}
+    
+ul li{
+    margin: 0;
+    padding: 0;
+    color: var(--add-color);
+    margin-top: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.shop-list input{
+    flex: 1;
+    cursor: pointer;
+}
+
+.shop-list input{
+    display: none;
+}
+
+.shop-list input + label:before{
+    content: "⬜️";
+    margin-right: 10px;
+}
+
+.shop-list input:checked + label:before{
+    content: "🌮";
+}
+
+.btn-box{
+    display: flex;
+    justify-content: center;
+}
+
+.btn{
+    margin: 0 10px;
+    border-radius: 3px;
+}
+
+.btn:hover{
+    background-color: var(--filled-color); 
+}
